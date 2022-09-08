@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.memory-game {
+    /* width: 820px;
+    height: 820px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 40px;
+    padding-bottom: 30px;
+    color: #71bed0;
+}
+
+.cards {
+    width: 896px;
+    height: 590px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    perspective: 1000px;
+    transition: 1s;
+}
+
+.card {
+    width: 190px;
+    height: 190px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:active {
+    transform: scale(0.95);
+    transition: transform 0.2s;
+}
+
+.back, .front {
+    width: 190px;
+    height: 190px;
+    border-radius: 100px;
+    border: 2px solid #71bed0;
+    cursor: pointer;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.congrat {
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s opacity, 1s visibility;
+    position: absolute;
+    top: 35%;
+    order: 100;
+    color: #71bed0;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.new-game {
+    visibility: hidden;
+    opacity: 0;
+    color: #71bed0;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 800;
+    border: 2px solid #71bed0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 1s opacity, 1s visibility;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background:  #71bed0;
+    color: #FFFFFF;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 5px 10px;
+}
+
+.git, .rss {
+    transform: scale(1);
+    transition: 0.3s;
+} 
+
+.img-rs, .img-git{
+    width: 100px;
+    height: 50px;
+    filter: invert(1);
+}
+
+.img-rs:hover, .img-git:hover{
+    transform: scale(1.15);
+    transition: 0.3s;
+}
+
+.move {
+    color: #71bed0;
+    font-size: 20px;
+    font-weight: 800;
+    padding-bottom: 5px;
+}
+
+.history {
+    width: 20%;
+    border: 3px solid #71bed0;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #e3f4f6;
+    color: #71bed0;
+    font-weight: 700;
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px
+}
+
+h3 {
+    /* color: #71bed0; */
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 800;
+}
